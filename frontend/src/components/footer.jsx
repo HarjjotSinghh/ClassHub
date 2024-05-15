@@ -59,7 +59,6 @@ export default function FooterLinks() {
     <footer className={classes.footer}>
       <Container className={classes.inner}>
         <div className={classes.logo}>
-          <Image src={"/logo.png"} className="opacity-80"></Image>
           <Text size="sm" c="dimmed" className={classes.description}>
             Hire skilled and motivated students for your tasks and support their journey.
           </Text>
@@ -68,7 +67,7 @@ export default function FooterLinks() {
       </Container>
       <Container className={classes.afterFooter}>
         <Text c="dimmed" size="sm">
-          © 2024 TaskHunt. All rights reserved.<br/> Developed and maintained with 💜 by <Link target='_blank' rel={"norefferer"} className='text-[var(--mantine-color-text)] font-bold' to={"https://github.com/HarjjotSinghh/TaskHunt"}>Team Vizard</Link>.
+          © 2024 ClassHub. All rights reserved.<br /> Developed and maintained with 💜 by <Link target='_blank' rel={"norefferer"} className='text-[var(--mantine-color-text)] font-bold' to={"https://github.com/HarjjotSinghh/ClassHub"}>Team Vizard</Link>.
         </Text>
 
         <Group gap={0} className={classes.social} justify="flex-end" wrap="nowrap">
