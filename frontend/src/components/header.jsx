@@ -23,11 +23,13 @@ const Header = () => {
           }
         }).then((res) => {
           setUserData(res)
+          console.log(res)
         }).catch((err) => {
           if (err.status === 401) {
             return <Title order={3} ta={"center"}>You are not logged in.</Title>
           }
-          console.error(err)
+          console.error(err);
+          console.log(err.message)
         })
       } catch (error) {
         console.error(error);
@@ -66,12 +68,12 @@ const Header = () => {
           </Link>
           <div className="flex items-center lg:order-2">
             <div className="relative">
-              {userData.status === 200 ? (
+              {user ? (
 
                 <button type="button" className="flex gap-2 items-center justify-center text-md  rounded-full mr-0" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom" onClick={toggleDropdown}>
                   {/* <span className="sr-only">Open user menu</span> */}
 
-                  {userData.data.user &&
+                  {userData && userData.data && userData.data.user &&
                     (
                       <>
                         <span className="text-base md:block hidden max-w-[200px] truncate">{userData.data.user.name}</span>
@@ -150,18 +152,18 @@ const Header = () => {
               </li>
               <li>
                 <Link
-                  to="/tasks"
+                  to="/classes"
                   className="block py-2 px-3 rounded "
                   onClick={closeMobileMenu}>
-                  Tasks
+                  Upcoming Classes
                 </Link>
               </li>
               <li>
                 <Link
-                  to="/create-task"
+                  to="/your-classes"
                   className="block py-2 px-3 rounded "
                   onClick={closeMobileMenu}>
-                  Create Task
+                  Your Classes
                 </Link>
               </li>
               {/* <li>

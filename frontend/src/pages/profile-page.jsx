@@ -83,7 +83,7 @@ export default function ProfilePage() {
                                     {userData.data.user.tasks.length}
                                 </Text>
                                 <Text ta="center" fz="md" c="dimmed" lh={1}>
-                                    Tasks
+                                    Classes Attended
                                 </Text>
                             </div>
                             <div>
@@ -91,7 +91,7 @@ export default function ProfilePage() {
                                     {userData.data.user.applications.length}
                                 </Text>
                                 <Text ta="center" fz="md" c="dimmed" lh={1}>
-                                    Applications
+                                    Classes Missed
                                 </Text>
                             </div>
                         </Group>
@@ -103,7 +103,7 @@ export default function ProfilePage() {
 
                         <Card withBorder padding={"xl"} radius="md">
                             <Title order={2} ta="center" fw={800}>
-                                Applications Submitted
+                                Classes Attended
                             </Title>
                             <ul className='mt-8 grid space-y-3 divide-y divide-purple-500/50'>
                                 {userData.data.user.applications.map((application) => (
@@ -159,7 +159,7 @@ export default function ProfilePage() {
                                 <li>
                                     <Link to={"/tasks"}>
                                         <Button leftSection={<MdAddCircleOutline className='size-6' />} fullWidth className='mt-8' size="lg" variant="light">
-                                            Apply For Another Task
+                                            Attend A Class
                                         </Button>
                                     </Link>
                                 </li>
@@ -169,7 +169,7 @@ export default function ProfilePage() {
 
                         <Card withBorder padding={"xl"} radius="md">
                             <Title order={2} ta="center" fw={800}>
-                                Tasks Listed
+                                Classes Missed
                             </Title>
                             <ul className="mt-8 grid space-y-3 divide-y divide-purple-500/50">
                                 {userData.data.user.tasks.map((task) => (
@@ -226,13 +226,13 @@ export default function ProfilePage() {
                                         </div>
                                     </li>
                                 ))}
-                                <li>
+                                {/* <li>
                                     <Link to={"/create-task"}>
                                         <Button leftSection={<MdAddCircleOutline className='size-6' />} fullWidth className='mt-8' size="lg" variant="light">
                                             Create A New Task
                                         </Button>
                                     </Link>
-                                </li>
+                                </li> */}
                             </ul>
                         </Card>
                     </Flex>
