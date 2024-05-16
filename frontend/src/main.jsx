@@ -63,10 +63,10 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route index element={<IndexPage />} />
       <Route path="/profile" element={<ProfilePage />} />
       <Route path="/create-task" element={<CreateTaskPage />} />
-      <Route path="/tasks" element={<AllTasksPage/>} />
+      <Route path="/tasks" element={<AllTasksPage />} />
       <Route path="/task/:taskID" element={<TaskPage />} />
     </Route>
-    <Route path="/login" element={<LoginPage />}></Route>
+    <Route path="/login" element={<LoginPage />} />
     <Route path="/register" element={<RegisterPage />} />
   </Route>
 ));
